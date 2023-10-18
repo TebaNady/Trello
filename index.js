@@ -8,7 +8,7 @@ import taskRoutes from './modules/tasks/tasks.routes.js';
 import session from 'express-session';
 // app.use(bodyParser.json())
 const app = express();
-const port = 5500;
+const port = process.env.PORT || 3000
 app.use(cors({origin: "*"}))
 connection()
 app.use(express.json());
